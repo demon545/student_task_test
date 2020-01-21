@@ -1,0 +1,1 @@
+{{ $groups->find(2)->title }}
