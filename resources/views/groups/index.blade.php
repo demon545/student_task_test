@@ -1,15 +1,6 @@
+@extends ('_layout')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
-<body>
+@section ('content')
     <table class="table table-sm">
         <thead>
             <th>Title</th>
@@ -33,16 +24,24 @@
                         <form action="{{ route('groups.show', $group) }}" method="GET">
                             @csrf
                             <button type="submit" class="btn btn-primary">
-                                <i class="fa fa-pencil-square-0">Edit</i>
+                                <i class="fa fa-pencil-square-1">Edit</i>
                             </button>
                         </form>
                     </td>
                     <td>
-                        <form action="" method="POST">
+                        <form action="{{ route('groups.destroy', $group) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">
-                                <i class="fa fa-pencil-square-0">Delete</i>
+                                <i class="fa fa-pencil-square-1">Delete</i>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="{{ route('groups.create') }}" method="GET">
+                            @csrf
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-pencil-square-1">Create</i>
                             </button>
                         </form>
                     </td>
@@ -51,5 +50,5 @@
             </tr>
         </tbody>
     </table>
-</body>
-</html>
+
+@endsection
