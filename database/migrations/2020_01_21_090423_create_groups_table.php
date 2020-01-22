@@ -20,6 +20,7 @@ class CreateGroupsTable extends Migration
             $table->double('average_math')->nullable()->default(0);
             $table->double('average_lang_ru')->nullable()->default(0);
             $table->double('average_lang_en')->nullable()->default(0);
+            $table->double('progress')->nullable()->default(0);
             $table->timestamps();
         });
     }

@@ -16,5 +16,5 @@
 // });
 
 
-Route::get('/', 'GroupsController@index')->name('groups.index');
+Route::resource('/groups', 'GroupsController');
 /// Route::get('/students', 'GroupsController@index')->name('groups.index');

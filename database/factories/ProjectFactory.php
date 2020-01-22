@@ -17,6 +17,7 @@ $factory->define(Groups::class, function (Faker $faker) {
     ];
 });
 
+
 $factory->define(Students::class, function (Faker $faker) {
     $faker = \Faker\Factory::create('en_US');
     return [

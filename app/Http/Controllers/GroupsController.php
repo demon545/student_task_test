@@ -12,4 +12,29 @@ class GroupsController extends Controller
     	$groups = Groups::all();
     	return view('groups', compact('groups'));
     }
+
+    public function create(Request $request)
+    {
+    }
+
+    public function store(Request $request)
+    {
+    }
+
+    public function show(Groups $group, Request $request)
+    {
+        dd($group);
+    }
+
+    public function edit(Request $request)
+    {
+    }
+
+    public function update(Request $request)
+    {
+    }
+
+    public function destroy(Request $request)
+    {
+    }
 }
